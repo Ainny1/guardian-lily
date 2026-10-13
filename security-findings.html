@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; connect-src 'none'">
+<title>Security Findings | Guardian Lily</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="index.html">✿ Guardian Lily</a><span class="tag">Ethical security research · Fictional offline labs</span></header>
+<main>
+<section class="dashboard-hero">
+<p class="eyebrow">Guardian Lily / PenTest Lab</p>
+<h1>Security findings <em>&amp; fixes.</em></h1>
+<p>Three documented, intentionally insecure offline training examples, each paired with a remediation and automated tests. These are educational demonstrations—not findings from a real-world target or proof of production exploitation.</p>
+<a class="button" href="index.html">← Back to digital safety</a>
+</section>
+<section class="metrics" aria-label="Portfolio overview">
+<div class="metric"><strong>03</strong><span>Documented exercises</span></div>
+<div class="metric"><strong>03</strong><span>Remediation examples</span></div>
+<div class="metric"><strong>13</strong><span>Lab test cases in source</span></div>
+</section>
+<section aria-labelledby="findings-heading">
+<p class="eyebrow">Evidence-based practice</p>
+<h2 id="findings-heading">Findings register</h2>
+<p class="small">Severity labels below are illustrative learning classifications, not scored production risks. Test case counts describe checked-in code, not independently verified passing runs.</p>
+<div class="findings-grid">
+<article class="finding-card">
+<div class="finding-top"><span class="finding-id">GL-001</span><span class="severity high">High · illustrative</span></div>
+<h3>Broken Object-Level Authorization</h3>
+<p class="finding-meta">Access control · IDOR / BOLA</p>
+<p>A fictional account can read another account's note when the code omits an ownership check.</p>
+<p><strong>Fix:</strong> Validate ownership before returning the object; use trusted authentication context in real systems.</p>
+<div class="finding-links"><a href="https://github.com/Ainny1/guardian-lily/blob/main/pentest-lab/FINDING-001.md">Finding report ↗</a><a href="https://github.com/Ainny1/guardian-lily/blob/main/pentest-lab/access_control.py">Code ↗</a><a href="https://github.com/Ainny1/guardian-lily/blob/main/pentest-lab/tests/test_access_control.py">Tests ↗</a></div>
+</article>
+<article class="finding-card">
+<div class="finding-top"><span class="finding-id">GL-002</span><span class="severity medium">Medium · illustrative</span></div>
+<h3>Unsafe HTML Rendering</h3>
+<p class="finding-meta">Input handling · XSS prevention</p>
+<p>Untrusted fictional markup is inserted into HTML without escaping; the lab does not execute browser scripts.</p>
+<p><strong>Fix:</strong> Encode text in its correct output context, or use safe DOM text APIs.</p>
+<div class="finding-links"><a href="https://github.com/Ainny1/guardian-lily/blob/main/pentest-lab/FINDING-002.md">Finding report ↗</a><a href="https://github.com/Ainny1/guardian-lily/blob/main/pentest-lab/xss_rendering.py">Code ↗</a><a href="https://github.com/Ainny1/guardian-lily/blob/main/pentest-lab/tests/test_xss_rendering.py">Tests ↗</a></div>
+</article>
+<article class="finding-card">
+<div class="finding-top"><span class="finding-id">GL-003</span><span class="severity high">High · illustrative</span></div>
+<h3>SQL Injection</h3>
+<p class="finding-meta">Injection · CWE-89</p>
+<p>String concatenation allows invented input to alter a SQLite filter and return extra fictional records.</p>
+<p><strong>Fix:</strong> Use parameterized queries and separately enforce authorization.</p>
+<div class="finding-links"><a href="https://github.com/Ainny1/guardian-lily/blob/main/pentest-lab/FINDING-003.md">Finding report ↗</a><a href="https://github.com/Ainny1/guardian-lily/blob/main/pentest-lab/sql_injection.py">Code ↗</a><a href="https://github.com/Ainny1/guardian-lily/blob/main/pentest-lab/tests/test_sql_injection.py">Tests ↗</a></div>
+</article>
+</div>
+</section>
+<section class="panel method-panel">
+<p class="eyebrow">How the work is structured</p>
+<h2>Reproduce. Explain. Remediate. Retest.</h2>
+<p>Every finding includes a controlled reproduction, root-cause analysis, a corrected implementation, and offline regression tests. All accounts and messages are invented. No vulnerable service is running on this site.</p>
+<p><strong>Run locally:</strong> <code>python -m unittest discover -s pentest-lab/tests -v</code></p>
+<p><a href="https://github.com/Ainny1/guardian-lily/actions">View GitHub Actions checks ↗</a> · <a href="https://github.com/Ainny1/guardian-lily/tree/main/pentest-lab">Explore the PenTest Lab ↗</a></p>
+</section>
+</main>
+<footer><span>✿ Guardian Lily</span><span>Offline ethical training · No tracking or data collection on this page</span></footer>
+</body>
+</html>
