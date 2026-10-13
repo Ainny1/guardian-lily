@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; connect-src 'none'">
+  <title>Guardian Lily | Digital Safety</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#home" aria-label="Guardian Lily home">✿ Guardian Lily</a><span class="tag">Privacy first · No accounts · No tracking</span></header>
+  <main id="home">
+    <section class="hero">
+      <p class="eyebrow">Digital safety, made approachable</p>
+      <h1>Feel more confident <em>online.</em></h1>
+      <p>Practical digital privacy tips and fictional safety scenarios for women, families, and anyone learning to stay safer online.</p>
+      <a class="button" href="#checkup">Start your privacy checkup</a>
+      <p class="small">Your selections stay in this browser tab. We don't collect or send them anywhere.</p>
+    </section>
+    <section class="panel" id="checkup">
+      <p class="eyebrow">01 / Your privacy checkup</p>
+      <h2>Small steps make a difference.</h2>
+      <p>Check off steps you've already taken. Nothing is saved after you leave or refresh this page.</p>
+      <div id="checklist" aria-label="Digital privacy checklist"></div>
+      <p id="progress" class="progress" aria-live="polite"></p>
+      <button type="button" class="secondary" id="reset">Reset checkup</button>
+    </section>
+    <section class="panel" id="practice">
+      <p class="eyebrow">02 / Spot the warning signs</p>
+      <h2>Practice with fictional messages.</h2>
+      <p>These examples are invented for education. Never paste real conversations or personal information into a website to get a safety verdict.</p>
+      <div class="scenario"><p class="message">“Hey, don't tell anyone we're chatting. Send me a photo so I know I can trust you.”</p><button type="button" class="secondary reveal" aria-expanded="false" aria-controls="answer1">Show safety notes</button><p id="answer1" class="answer" hidden>Secrecy requests and pressure to share photos can be warning signs. You can stop responding, block the account, and talk to a trusted adult or support person. A single message does not establish someone's identity or intent.</p></div>
+      <div class="scenario"><p class="message">“Your account is locked. Click this link and enter your password immediately.”</p><button type="button" class="secondary reveal" aria-expanded="false" aria-controls="answer2">Show safety notes</button><p id="answer2" class="answer" hidden>Urgent requests for passwords through links can be phishing. Open the service through its official app or a bookmark instead. Do not enter a password through an unexpected message link.</p></div>
+    </section>
+    <section class="panel resources" id="resources">
+      <p class="eyebrow">03 / Support and boundaries</p>
+      <h2>You deserve control over your digital space.</h2>
+      <p>If you suspect someone monitors your device or accounts, changing settings may alert them. Consider using a device they cannot access and getting guidance from a trusted local support organization.</p>
+      <p>This site is educational, not emergency response, legal advice, or a substitute for a qualified safety professional. If you are in immediate danger, contact local emergency services when safe to do so.</p>
+    </section>
+  </main>
+  <footer><span>✿ Guardian Lily</span><span>Open-source digital safety education · No analytics or data collection</span></footer>
+</body>
+</html>
