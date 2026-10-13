@@ -5,7 +5,7 @@
 Guardian Lily has two intentionally separate parts:
 
 - **Guardian Lily Protect** — a static, accessible educational website with a personal privacy checkup and fictional-message safety scenarios.
-- **Guardian Lily PenTest Lab** — a planned isolated, intentionally vulnerable *fictional* application for authorized security testing and remediation. Not yet implemented.
+- **Guardian Lily PenTest Lab** — an offline collection of fictional security exercises with vulnerable examples, secure fixes, finding reports, and tests. No vulnerable service is deployed.
 
 ## Protect MVP
 
@@ -19,7 +19,7 @@ The educational site is not an emergency response service and cannot determine w
 python -m unittest discover -s tests -v
 ```
 
-The repository includes GitHub Actions for these offline tests. CI results and deployment have not yet been verified.
+The repository includes GitHub Actions for these offline tests. GitHub Actions is configured to run both static-site and PenTest Lab tests; check the Actions tab for actual run results. The public site is published via GitHub Pages.
 
 ### Privacy and safety
 
@@ -27,16 +27,17 @@ See [Threat Model](docs/THREAT-MODEL.md). Even without application tracking, a b
 
 ### Penetration testing
 
-See [PenTest Lab plan](pentest-lab/README.md). Any vulnerable examples will be kept local-only and separate from the public educational website.
+See [PenTest Lab exercises](pentest-lab/README.md) and the [Security Findings Dashboard](security-findings.html). Insecure examples are offline only; GitHub Pages may make source files publicly readable but does not run these Python exercises.
 
 ## Roadmap
 
 - [x] Static privacy checkup
 - [x] Fictional-message awareness examples
 - [x] Offline static tests and initial threat model
-- [ ] Validate GitHub Actions and publish the static site
+- [x] Publish static site; CI configured (verify individual workflow results)
 - [ ] Expand accessible educational scenarios with careful review
-- [ ] Build isolated PenTest lab with patches and regression tests
+- [x] Add three offline PenTest exercises with fixes and regression tests
+- [x] Publish security findings dashboard
 
 ## License
 
